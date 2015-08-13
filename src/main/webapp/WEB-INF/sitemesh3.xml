@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+	<!-- Map default decorator. This shall be applied to all paths if no other paths match. 	-->
+  	<mapping path="/*" decorator="/WEB-INF/sitemesh/decorator_general.jsp"/>
+	
+	<!--  custom 
+	<content-processor>
+    	<tag-rule-bundle class="com.something.CssCompressingBundle" />
+    	<tag-rule-bundle class="com.something.LinkRewritingBundle"/>
+ 	</content-processor>
+ 	-->
+ 	<content-processor>
+	    <tag-rule-bundle class="org.sitemesh.content.tagrules.html.DivExtractingTagRuleBundle" />
+	</content-processor>
+	
+  <!-- Map decorators to path patterns. 
+ 	 <mapping path="/admin/*" decorator="/another-decorator.html"/>
+  	<mapping path="/*.special.jsp" decorator="/special-decorator.html"/>
+  	<mapping path="/*" decorator="/view/sitemesh/decorator_general.jsp"/>
+  -->
+  
+  
+  <!-- Exclude path from decoration. : 적용하지 않을 경로 지정.  -->
+  	<mapping path="/WEB-INF/views/account/*" exclude="true"/>
+  	<mapping path="/assets/plugins/se2/*" exclude="true"/>
+	<mapping path="/assets/plugins/se2/SmartEditor2Skin.html" exclude="true"/>
+</sitemesh>

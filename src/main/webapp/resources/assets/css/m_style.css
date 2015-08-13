@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+
+    font-family:'bmhanna';
+
+    src: url('../font/BMHANNA_11yrs_otf.otf');
+
+    src: url('../font/BMHANNA_11yrs_ttf.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+select option {text-align:center;}
+<!-- site theme-->
+#sign_up A:link { text-decoration:none; }
+#sign_up A:visited { text-decoration:none; } 
+#sign_up A:active { text-decoration:none; }
+#sign_up A:hover { text-decoration:none; }
+
+#nav_sub_menu{	
+	margin-top: 15px;
+	border-right: 1px solid #ddd;
+
+}
+
+#nav_sub_menu a{	
+	display:block;				 
+	padding:10px 10px 10px 10px; 
+	text-decoration:none;	
+	color:black;	
+	margin-bottom:1px;
+	border-left:20px solid #242a30;		
+}
+
+<!-- font config -->
+.font-hanna {
+	font-family: "bmhanna", sans-serif;
+}
+.font-nanum-gothic {
+	font-family: "Nanum Gothic", sans-serif;
+}
+
+.bg-not 
+{
+	background:#d9e0e7;
+}
+.border { border-right:1px solid #000; }
+.border-right { border-right:1px solid #000; }
+select { text-align:center; }
+
+.width-60 { width:60px; }
+.width-70 { width:70px; }
+.width-80 { width:80px; }
+.width-90 { width:90px; }
+.width-110 { width:110px; }
+.width-130 { width:130px; }
+.width-160 { width:160px; }
+.width-170 { width:170px; }
+
+
+textarea { resize:none; }
+
+
+
+/* jaso-left-menu-custom */
+
+.list-group-item.list-group-item-default {    
+ 	
+ 	background: #d9e0e7;
+ 	color : #000; 
+ 	font-size:10pt;
+   
+}
+.list-group-item.list-group-item-default I {
+    color:#333;
+}
+.list-group-item.list-group-item-default:hover, 
+.list-group-item.list-group-item-default:focus {
+   	color : #000; 
+    background: #ccc;
+}
+
+.panel-jaso > .panel-heading { 
+	background: #d9e0e7; 
+	color : #000;
+	margin-bottom:0px;
+}
+.panel-jaso > .panel-heading:hover,
+.panel-jaso > .panel-heading:focus {
+	color : #000; 
+    background: #ccc;
+}
+
+.panel-jaso > .panel-collapse > .panel-body { 
+	background: #d9e0e7; 
+	color : #000;
+	margin-top:0px;
+	padding-top:0px;
+}
+
+.panel-jaso > .panel-collapse > .panel-body > a { 
+	border-left : 1px dotted #000;
+}
+.wr {height:100%;}
+.hr {
+	height: 1px;
+    margin: 5px 0;
+    background: #f2f2f2;
+}
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+	<strengths>		
+		<strength id="r-stre-0"><item>책임감이 강함</item></strength>
+		<strength id="r-stre-1"><item>집중력이 뛰어남</item></strength>
+		<strength id="r-stre-2"><item>계획을 잘 세움</item></strength>
+		<strength id="r-stre-3"><item>운동을 잘 함</item></strength>
+		<strength id="r-stre-4"><item>창의력이 뛰어남</item></strength>
+		<strength id="r-stre-5"><item>정리정돈을 잘함</item></strength>
+		<strength id="r-stre-6"><item>이해력이 우수함</item></strength>
+		<strength id="r-stre-7"><item>계산이 빠름</item></strength>
+		<strength id="r-stre-8"><item>예술적 감각이 탁월함</item></strength>
+		<strength id="r-stre-9"><item>실행력이 뛰어남</item></strength>
+		<strength id="r-stre-10"><item>기계를 잘 다룸</item></strength>
+		<strength id="r-stre-11"><item>문서작성 능력이 우수함</item></strength>
+		<strength id="r-stre-12"><item>분석능력이 우수함</item></strength>
+		<strength id="r-stre-13"><item>화술이 뛰어남</item></strength>
+		<strength id="r-stre-14"><item>검색능력이 뛰어남</item></strength>
+		<strength id="r-stre-15"><item>독서를 많이 함</item></strength>
+		<strength id="r-stre-16"><item>준비성이 뛰어남</item></strength>	
+	</strengths>
+</data>
+

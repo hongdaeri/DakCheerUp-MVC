@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+	<characters>
+		<character id="r-char-0"><item>낭만적</item></character>
+		<character id="r-char-1"><item>비판적</item></character>
+		<character id="r-char-2"><item>이성적</item></character>
+		<character id="r-char-3"><item>활동적</item></character>
+		<character id="r-char-4"><item>이타적</item></character>
+		<character id="r-char-5"><item>논리적</item></character>
+		<character id="r-char-6"><item>온화함</item></character>
+		<character id="r-char-7"><item>현실적</item></character>
+		<character id="r-char-8"><item>적극적</item></character>
+		<character id="r-char-9"><item>침착함</item></character>
+		<character id="r-char-10"><item>낙관적</item></character>
+		<character id="r-char-11"><item>활발함</item></character>
+		<character id="r-char-12"><item>차분함</item></character>
+		<character id="r-char-13"><item>신중함</item></character>
+		<character id="r-char-14"><item>털털함</item></character>
+		<character id="r-char-15"><item>대범함</item></character>
+		<character id="r-char-16"><item>감성적</item></character>
+		<character id="r-char-17"><item>외향적</item></character>
+		<character id="r-char-18"><item>섬세함</item></character>		
+	</characters>
+</data>
+
