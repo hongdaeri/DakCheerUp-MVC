@@ -19,6 +19,12 @@
           <element id="library" level="project" name="Maven: org.sitemesh:sitemesh:3.0.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: javax.annotation:jsr250-api:1.0" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.2" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.0" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.31" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

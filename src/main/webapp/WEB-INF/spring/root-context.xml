@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <!-- Root Context -->
+
+       <!-- mysql _ datasource -->
+       <bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
+              <property name="driver" value="com.mysql.jdbc.Driver" />
+              <property name="url" value="jdbc:mysql://localhost:3306/dakcheerup" />
+              <property name="username" value="fourdrone" />
+              <property name="password" value="aslk1209" />
+       </bean>
+
+       <!-- mybatis_ configurations -->
+       <bean id ="sqlSessionFactory" class= "org.mybatis.spring.SqlSessionFactoryBean" >
+              <property name ="dataSource" ref= "dataSource"></property >
+              <property name ="configLocation" value= "classpath:/mybatis/mybatis-config.xml" />
+              <property name="mapperLocations" value="classpath:/mybatis/*-mapper.xml"/>
+       </bean >
+       <bean id ="transactionManager"
+             class= "org.springframework.jdbc.datasource.DataSourceTransactionManager" >
+              <property name ="dataSource" ref= "dataSource"></property >
+       </bean >
+       <bean id ="sqlSession" class= "org.mybatis.spring.SqlSessionTemplate" >
+              <constructor-arg index="0" ref= "sqlSessionFactory" />
+       </bean>
+
+        <bean id="UserDao" class="fourdrone.dakcheerup.dao.UserDao"></bean>
+
+</beans>
