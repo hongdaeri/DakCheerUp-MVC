@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- Root Context -->
+
+   <context:component-scan base-package="fourdrone.dakcheerup.test" />
+
+    <!-- MyBatis -->
+    <bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
+        <property name="driver" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/dakcheerup"></property>
+        <property name="username" value="dev"></property>
+        <property name="password" value="aslk1209"></property>
+    </bean>
+
+   <!-- 트랜잭션 -->
+   <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+          <property name="dataSource" ref="dataSource" />
+
+   </bean>
+
+   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+          <property name="dataSource" ref="dataSource" />
+          <!-- 아래부분은 매핑할 xml파일이 있는 패키지경로를 설정한다. -->
+          <property name="typeAliasesPackage" value="fourdrone.dakcheerup.test" />
+          <property name="mapperLocations" value="WEB-INF/config/mapper/*.xml" />
+   </bean>
+
+   <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+          <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+   </bean>
+</beans>

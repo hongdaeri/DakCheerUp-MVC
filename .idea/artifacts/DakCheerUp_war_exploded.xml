@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" build-on-make="true" name="DakCheerUp:war exploded">
-    <output-path>$PROJECT_DIR$/target/DakCheerUp</output-path>
+    <output-path>$PROJECT_DIR$/src/main/webapp</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -25,6 +25,8 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.2.7" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -1,7 +1,7 @@
 package fourdrone.dakcheerup.domain.member;
 import java.sql.Timestamp;
 
-public class Member {
+public class Members {
 	private String memberId;		// 회원_아이디 
 	private String memberPassword;	// 회원_비밀번호	
 	private String memberName;		// 회원_이름

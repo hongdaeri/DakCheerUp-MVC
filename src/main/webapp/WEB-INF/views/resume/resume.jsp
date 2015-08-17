@@ -1,60 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-	<link href="/resources/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" rel="stylesheet" />
-	<link href="/resources/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
-	<link href="/resources/plugins/switchery/switchery.min.css" rel="stylesheet" />
-	<link href="/resources/css/resume.css" rel="stylesheet" />
-	<!-- =================== ETC ======================================= -->
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<jsp:include page="./config/resume_head.jsp" flush="false" />
 
-	<div class="vertical-box">
-  		<div class="vertical-box-column width-150">
-	      	<div class="vertical-box">		                
-	          	<div class="vertical-box-row">
-					<div class="vertical-box-cell">
-						<div class="vertical-box-inner-cell">   
-							<div data-scrollbar="true" data-height="100%" class="m-r-10">
-	                         	<!--  left side menu -->                                 	
-	                         	<!--  sub menu -->                                 	                               	                  
-								<div id="resume-menu" class="panel panel-inverse" data-sortable-id="index-1">
-									<div class="panel-heading">
-										<h4 class="panel-title">이력서 항목</h4>
-									</div> 
-									<div class="list-group f-s-12">
-										<a href="#resume-profile" class="list-group-item list-group-item-inverse text-ellipsis">기본인적사항</a> 
-										<a href="#resume-add-profile" class="list-group-item list-group-item-inverse text-ellipsis">추가인적사항</a> 										
-										<a href="#resume-academic" class="list-group-item list-group-item-inverse text-ellipsis">학력사항</a>
-										<a href="#resume-oa" class="list-group-item list-group-item-inverse text-ellipsis">OA능력</a>
-										<a href="#resume-strength" class="list-group-item list-group-item-inverse text-ellipsis">강점/성격</a>
-										<a href="#resume-license" class="list-group-item list-group-item-inverse text-ellipsis">자격증/면허증</a>
-										<a href="#resume-lang-ability" class="list-group-item list-group-item-inverse text-ellipsis">어학능력</a>
-										<a href="#resume-lang-exam" class="list-group-item list-group-item-inverse text-ellipsis">어학시험</a>
-										<a href="#resume-award" class="list-group-item list-group-item-inverse text-ellipsis">수상내역/공모전</a>
-										<a href="#resume-career" class="list-group-item list-group-item-inverse text-ellipsis">경력/실습사항</a>
-										<a href="#resume-voluntary" class="list-group-item list-group-item-inverse text-ellipsis">봉사활동/대외활동</a>
-										<a href="#resume-education" class="list-group-item list-group-item-inverse text-ellipsis">교육이수내역</a>
-										<a href="#resume-project" class="list-group-item list-group-item-inverse text-ellipsis">참여프로젝트</a>
-										<a href="#resume-write" class="list-group-item list-group-item-inverse text-ellipsis">저술내역</a>
-										<a href="#resume-global" class="list-group-item list-group-item-inverse text-ellipsis">글로벌경험</a>
-										<a href="#resume-swot" class="list-group-item list-group-item-inverse text-ellipsis">SWOT자기분석</a>
-									</div>
-								</div> 
-							</div>
-							<!-- sub menu -->
-							<!--//left side menu-->                                                   
-						</div>
-					</div>
-				</div>		              
-			</div>
-		</div>
-		<div class="vertical-box-column">
-			<div class="vertical-box">
-				<div class="vertical-box-row">
-					<div class="vertical-box-cell">
-						<div class="vertical-box-inner-cell">
 							<div data-scrollbar="true" data-height="100%" class="m-l-15 m-r-15">
 								<div class="row">
 									<div class="col-md-12" data-spy="scroll" data-target="resume-menu">
@@ -63,10 +10,10 @@
 										<div id="resume-profile" class="panel panel-inverse " data-sortable-id="ui-widget-1">
 											<div class="panel-heading">
 					                           <div class="panel-heading-btn">
-					                               	<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-					                               	<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-					                               	<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-					                               	<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+					                               	<a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+					                               	<a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+					                               	<a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+					                               	<a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 					                           </div>
 					                           <h4 class="panel-title">기본인적사항</h4>
 					                       </div>
@@ -206,7 +153,7 @@
 													</table>													
 												</div>
 												<div class="m-t-0 m-b-10 text-right">
-					                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+					                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 					                      		</div>
 					                       </div>					                       					                  
 					                	</div>
@@ -216,10 +163,10 @@
 								        <div id="resume-add-profile" class="panel panel-inverse" data-sortable-id="ui-widget-2">
 					                       <div class="panel-heading">
 					                           <div class="panel-heading-btn">
-					                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-					                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-					                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-					                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+					                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+					                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+					                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+					                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 					                           </div>
 							                    <h4 class="panel-title">추가인적사항</h4>
 							                </div>
@@ -246,7 +193,7 @@
 																	
 																</tr>
 																<tr class="warning">
-																	<td><a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a></td>
+																	<td><a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a></td>
 																	<td>관계</td>
 																	<td>성명</td>
 																	<td>연령</td>
@@ -254,7 +201,7 @@
 																	<td>동거여부</td>														
 																</tr>
 																<tr>
-																	<td><a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a></td>
+																	<td><a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a></td>
 																	<td>
 																		<select class="form-control input-sm">
 																			<option value="NIL" selected>--관계 선택--</option>
@@ -364,7 +311,7 @@
 														</table>													
 													</div>
 													<div class="m-t-0 m-b-10 text-right">
-						                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+						                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 						                      		</div>
 												</form>
 						                 	</div>
@@ -374,10 +321,10 @@
 								        <div id="resume-academic" class="panel panel-inverse" data-sortable-id="ui-widget-3">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">학력사항</h4>
 						                       </div>
@@ -442,7 +389,7 @@
 														<table class="width-full">
 															<tr>
 																<td><h5>대학교</h5></td>
-																<td class="text-right p-r-15"><a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a></td>
+																<td class="text-right p-r-15"><a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a></td>
 															</tr>
 														</table>
 													
@@ -450,7 +397,7 @@
 															<table id="resume-family-table" class="table table-bordered table-condensed table-valign-middle text-center">															
 																<tbody>																
 																	<tr>
-																		<td rowspan="3" class="width-60 warning"><a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a></td>
+																		<td rowspan="3" class="width-60 warning"><a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a></td>
 																		<td class="warning">재학기간</td>
 																		<td colspan="3">
 																			<div class="row m-0 p-0">
@@ -544,7 +491,7 @@
 															</table>													
 														</div>
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -554,10 +501,10 @@
 								        <div id="resume-oa" class="panel panel-inverse" data-sortable-id="ui-widget-4">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">OA 활용능력</h4>
 						                       </div>
@@ -620,7 +567,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -630,10 +577,10 @@
 								        <div id="resume-strength" class="panel panel-inverse" data-sortable-id="ui-widget-5">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">강점/성격</h4>
 						                       </div>
@@ -693,7 +640,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -703,10 +650,10 @@
 								        <div id="resume-license" class="panel panel-inverse" data-sortable-id="ui-widget-6">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">자격증/면허증</h4>
 						                       </div>
@@ -717,7 +664,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td>
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td>취득일자</td>
 																		<td>자격/면허명</td>
@@ -726,7 +673,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-yyyy-mm-dd"/>	
@@ -753,7 +700,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -763,10 +710,10 @@
 								        <div id="resume-lang-ability" class="panel panel-inverse" data-sortable-id="ui-widget-7">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">어학능력</h4>
 						                       </div>
@@ -777,7 +724,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td>
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td>언어</td>
 																		<td>회화능력</td>
@@ -786,7 +733,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<select class="form-control input-sm">
@@ -871,7 +818,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -881,10 +828,10 @@
 								        <div id="resume-lang-exam" class="panel panel-inverse" data-sortable-id="ui-widget-8">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">어학시험</h4>
 						                       </div>
@@ -895,7 +842,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td>
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td>언어</td>
 																		<td>어학시험</td>
@@ -904,7 +851,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<SELECT class="form-control input-sm" name="langName" onChange="BuildLangExamOp(this.selectedIndex);">
@@ -950,7 +897,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -960,10 +907,10 @@
 								        <div id="resume-award" class="panel panel-inverse" data-sortable-id="ui-widget-9">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">수상내역 / 공모전 </h4>
 						                       </div>
@@ -974,7 +921,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-100">수상일</td>
 																		<td>수상명</td>
@@ -983,7 +930,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-yyyy-mm"/>
@@ -1007,7 +954,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1017,10 +964,10 @@
 								        <div id="resume-career" class="panel panel-inverse" data-sortable-id="ui-widget-10">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">경력 및 실습사항 </h4>
 						                       </div>
@@ -1031,7 +978,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-150">기간</td>
 																		<td>회사명</td>
@@ -1041,7 +988,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-period"/>
@@ -1064,7 +1011,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1074,10 +1021,10 @@
 								        <div id="resume-voluntary" class="panel panel-inverse" data-sortable-id="ui-widget-11">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">봉사활동 / 대외활동</h4>
 						                       </div>
@@ -1088,7 +1035,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-150">기간</td>
 																		<td>봉사기관</td>
@@ -1096,7 +1043,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-period"/>
@@ -1113,7 +1060,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1123,10 +1070,10 @@
 								        <div id="resume-education" class="panel panel-inverse" data-sortable-id="ui-widget-12">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">교육이수내역</h4>
 						                       </div>
@@ -1137,7 +1084,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-150">기간</td>
 																		<td>과정명</td>
@@ -1145,7 +1092,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-period"/>
@@ -1162,7 +1109,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1172,10 +1119,10 @@
 								        <div id="resume-project" class="panel panel-inverse" data-sortable-id="ui-widget-13">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">참여 프로젝트</h4>
 						                       </div>
@@ -1186,7 +1133,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-150">프로젝트 기간</td>
 																		<td class="width-150">구분</td>
@@ -1194,7 +1141,7 @@
 																	</tr>
 																	<tr>	
 																		<td rowspan="2">
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-period"/>
@@ -1231,7 +1178,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1241,10 +1188,10 @@
 								        <div id="resume-write" class="panel panel-inverse" data-sortable-id="ui-widget-14">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">저술내역</h4>
 						                       </div>
@@ -1255,7 +1202,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-100">발행(게재)일</td>
 																		<td class="width-130">분류</td>
@@ -1264,7 +1211,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-yyyy-mm"/>
@@ -1291,7 +1238,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1301,10 +1248,10 @@
 								        <div id="resume-global" class="panel panel-inverse" data-sortable-id="ui-widget-15">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">글로벌 경험</h4>
 						                       </div>
@@ -1315,7 +1262,7 @@
 																<tbody>																	
 																	<tr class="warning">
 																		<td class="width-50">
-																			<a href="javascript:;" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
+																			<a href="javascript:" class="" data-click="resume-add"><i class="ion-plus-round fa fa-lg text-success"></i></a>
 																		</td>
 																		<td class="width-160">기간</td>
 																		<td class="width-170">국가</td>																		
@@ -1324,7 +1271,7 @@
 																	</tr>
 																	<tr>	
 																		<td>
-																			<a href="javascript:;" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
+																			<a href="javascript:" class="btn btn-danger btn-icon btn-xs btn-circle" data-click="resume-delete"><i class="ion-minus-round fa fa-lg text-white"></i></a>
 																		</td>
 																		<td>
 																			<input type="text" class="form-control input-sm masked-input-period"/>
@@ -1353,7 +1300,7 @@
 														</div>													
 														
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1363,10 +1310,10 @@
 								        <div id="resume-swot" class="panel panel-inverse" data-sortable-id="ui-widget-16">
 						                       <div class="panel-heading">
 						                           <div class="panel-heading-btn">
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						                               <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						                               <a href="javascript:" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
 						                           </div>
 						                           <h4 class="panel-title">SWOT 자기분석</h4>
 						                       </div>
@@ -1424,7 +1371,7 @@
 														</div>                    													
 													
 														<div class="m-t-0 m-b-10 text-right">
-							                            	<a href="javascript:;" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>							                            	
+							                            	<a href="javascript:" class="btn btn-warning btn-sm">&nbsp; 저장 &nbsp;</a>
 							                      		</div>
 													</form>
 						                       </div>
@@ -1432,62 +1379,7 @@
 								        <!-- end panel -->
 										</div>
 									</div>	
-								</div>
 							</div>
-						</div>
-					 </div>
-				</div>
-			</div>
-		</div>
-	
-	
 
-	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
-	<div id="siteMeshJavaScript">
 
-		<script src="/resources/plugins/masked-input/masked-input.min.js"></script>
-		<script src="/resources/js/resume-my.js"></script>
-		<script src="/resources/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
-		<script src="/resources/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
-		<script src="/resources/js/form-wysiwyg.demo.min.js"></script>		
-		<script src="/resources/plugins/switchery/switchery.min.js"></script>
-		<script src="/resources/js/form-slider-switcher.demo.min.js"></script>
-		<script>
-		//example
-		
-		var handleFormMaskedInput = function() {
-		    "use strict";		   
-		    $(".masked-input-phone").mask("999-9999-9999");
-		    $(".masked-input-yyyy-mm-dd").mask("9999.99.99");
-		    $(".masked-input-yyyy-mm").mask("9999.99");
-		    $(".masked-input-period").mask("9999.99 - 9999.99");
-		    $("#masked-input-pno").mask("aaa-9999-a");
-		    $("#masked-input-pkey").mask("a*-999-a999");
-		};
-			$(document).ready(function() {
-				App.init();
-				FormWysihtml5.init();
-				FormSliderSwitcher.init();
-				
-				document.getElementById("m_resume").className = "active";
-				resumeBtnToolTipAndAction();
-				handleFormMaskedInput();
-			});
-			
-			
-			
-			
-			
-		
-			
-		</script>
-		
-	</div>
-	<!-- ================== END PAGE LEVEL JS ================== -->
- 
-
-	
-</body>
-
-</html>
-
+							<jsp:include page="./config/resume_footer.jsp" flush="false" />
