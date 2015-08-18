@@ -21,7 +21,10 @@
   
   
   <!-- Exclude path from decoration. : 적용하지 않을 경로 지정.  -->
-  	<mapping path="/WEB-INF/views/account/*" exclude="true"/>
-  	<mapping path="/WEB-INF/views/result.jsp" exclude="true"/>
+
+	<mapping path="/account" exclude="true"/>
+	<mapping path="/account/*" exclude="true"/>
+
+	<mapping path="/WEB-INF/views/result.jsp" exclude="true"/>
 	<mapping path="/assets/plugins/se2/SmartEditor2Skin.html" exclude="true"/>
 </sitemesh>

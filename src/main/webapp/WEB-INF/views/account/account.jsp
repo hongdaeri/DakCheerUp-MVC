@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="ko" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
@@ -57,7 +57,7 @@
 			</div>
 			<!-- end brand -->
 			<div class="login-content">
-				<form action="/index.jsp" method="POST"
+				<form action="/account/login" method="POST"
 					class="margin-bottom-0">
 					<div class="form-group m-b-20">
 						<input type="text" class="form-control input-lg" placeholder="ID" />
@@ -99,7 +99,7 @@
 	<div class="modal fade" id="modal-dialog">
 		<div class="modal-dialog ">
 			<div class="modal-content ">
-			<form class="form-horizontal form-bordered" data-parsley-validate="true" name="sign-up-form">
+			<form action="/account/signUp" method="post" class="form-horizontal form-bordered" data-parsley-validate="true" name="sign-up-form">
 	           	<fieldset>
 				<div class="modal-header bg-black text-center">
 					<button type="button" class="close btn-danger" data-dismiss="modal" aria-hidden="true">×</button>
@@ -137,7 +137,7 @@
 					</div>                         
 				</div>
 				<div class="modal-footer bg-black">		
-					<a href="javascript:;" class="btn btn-danger" data-dismiss="modal">취소</a>					
+					<a href="javascript:" class="btn btn-danger" data-dismiss="modal">취소</a>
 					<button type="submit" class="btn btn-success"><i class="fa fa-sign-in m-r-10"></i>회원가입 완료</button>
 				</div>
 				</fieldset>

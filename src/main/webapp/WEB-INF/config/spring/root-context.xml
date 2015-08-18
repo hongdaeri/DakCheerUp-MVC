@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <!-- Root Context -->
 
-   <context:component-scan base-package="fourdrone.dakcheerup.test" />
+   <context:component-scan base-package="fourdrone.dakcheerup" />
 
     <!-- MyBatis -->
     <bean id="dataSource" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
@@ -27,7 +27,7 @@
    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
           <property name="dataSource" ref="dataSource" />
           <!-- 아래부분은 매핑할 xml파일이 있는 패키지경로를 설정한다. -->
-          <property name="typeAliasesPackage" value="fourdrone.dakcheerup.test" />
+          <property name="typeAliasesPackage" value="fourdrone.dakcheerup.domain" />
           <property name="mapperLocations" value="WEB-INF/config/mapper/*.xml" />
    </bean>
 

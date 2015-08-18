@@ -5,7 +5,7 @@
 package fourdrone.dakcheerup.domain;
 
 
-import fourdrone.dakcheerup.domain.member.Members;
+import fourdrone.dakcheerup.domain.member.Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,18 +17,18 @@ import java.util.List;
 public class Users {
 		
 	// 단일 Vo클래스들.
-	private Members member;
+	private Member member;
 	
 	// 리스트 Vo클래스
-	private List<Members> memberList;
+	private List<Member> memberList;
 	
 	public Users()
 	{
 		//단일 클래스 Initialize
-		this.member				= new Members();
+		this.member				= new Member();
 		
 		// 리스트 클래스 Initialize
-		this.memberList			= new ArrayList<Members>();
+		this.memberList			= new ArrayList<Member>();
 	
 	}
 
@@ -37,7 +37,7 @@ public class Users {
 	/**
 	 * @return the member
 	 */
-	public Members getMember() {
+	public Member getMember() {
 		return member;
 	}
 
@@ -46,7 +46,7 @@ public class Users {
 	/**
 	 * @return the memberList
 	 */
-	public List<Members> getMemberList() {
+	public List<Member> getMemberList() {
 		return memberList;
 	}
 
@@ -55,7 +55,7 @@ public class Users {
 	/**
 	 * @param member the member to set
 	 */
-	public void setMember(Members member) {
+	public void setMember(Member member) {
 		this.member = member;
 	}
 
@@ -64,7 +64,7 @@ public class Users {
 	/**
 	 * @param memberList the memberList to set
 	 */
-	public void setMemberList(List<Members> memberList) {
+	public void setMemberList(List<Member> memberList) {
 		this.memberList = memberList;
 	}	
 }

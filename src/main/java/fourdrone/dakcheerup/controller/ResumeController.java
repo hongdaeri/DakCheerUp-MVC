@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/resume")
 public class ResumeController {
-    //@Autowired private ResumeService resumeService;
+
+   // @Autowired private ResumeService resumeService;
 
 
 /*
@@ -33,6 +34,8 @@ public class ResumeController {
         model.addAttribute("message", "Hello world!!!");
         return "resume/resume";
     }
+
+
 
     @RequestMapping(value="/profile", method = RequestMethod.GET)
     public String getResumeProfile(ModelMap model) {
@@ -134,8 +137,4 @@ public class ResumeController {
         model.addAttribute("message", "Hello world!!!");
         return "resume/resume-config";
     }
-
-
-
-
 }

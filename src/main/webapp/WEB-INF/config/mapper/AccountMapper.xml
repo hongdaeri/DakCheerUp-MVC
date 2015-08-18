@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--여기는 매핑할 Mapper 의 풀 패키지명을 적어준다-->
+<mapper namespace="fourdrone.dakcheerup.mapper.AccountMapper">
+    <resultMap type="fourdrone.dakcheerup.domain.member.Member" id="MemberResult">
+        <result property="memberId" column="memberId" />
+        <result property="memberPassword" column="memberPassword" />
+        <result property="memberName" column="memberName" />
+        <result property="regDate" column="regDate" />
+    </resultMap>
+
+    <select id="getMemberList" resultMap="MemberResult">
+        SELECT  * FROM  MEMBER
+    </select>
+
+    <select id="getMember" parameterType="String" resultMap="MemberResult">
+        SELECT  * FROM  MEMBER  WHERE memberId = #{memberId}
+    </select>
+
+
+    <insert id="addMember" parameterType="fourdrone.dakcheerup.domain.member.Member"> <!-- useGeneratedKeys="true" keyProperty="id"> -->
+        INSERT INTO MEMBER
+        VALUES (#{memberId}, #{memberPassword}, #{memberName}, #{regDate})
+    </insert>
+
+    <update id="modMember" parameterType="fourdrone.dakcheerup.domain.member.Member">
+        UPDATE MEMBER
+        SET memberPassword = #{memberPassword} , memberName=#{memberName}
+        WHERE memberId = #{memberId}
+    </update>
+
+
+    <delete id="delMember" parameterType="String">
+        DELETE FROM MEMBER WHERE memberId = #{memberId}
+    </delete>
+
+</mapper>
