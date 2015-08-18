@@ -25,10 +25,10 @@
 	
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="/resources/plugins/pace/pace.min.js"></script>
+	<script src="/resources/js/account.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
 <body class="pace-top">
-
 	<!-- begin #page-loader -->
 	<div id="page-loader" class="fade in">
 		<span class="spinner"></span>
@@ -60,18 +60,17 @@
 				<form action="/account/login" method="POST"
 					class="margin-bottom-0">
 					<div class="form-group m-b-20">
-						<input type="text" class="form-control input-lg" placeholder="ID" />
+						<input name="memberId" type="text" class="form-control input-lg" placeholder="ID" />
 					</div>
 					<div class="form-group m-b-20">
-						<input type="text" class="form-control input-lg"
-							placeholder="Password" />
+						<input name="memberPassword" type="text" class="form-control input-lg" placeholder="Password" />
 					</div>
 					<div class="checkbox m-b-20">
 						<label> <input type="checkbox" /> ID 기억하기
 						</label>
 					</div>
 					<div class="login-buttons">
-						<button type="submit" class="btn btn-success btn-block btn-lg">로그인</button>
+						<button type="button" onClick="login_validate(this.form);" class="btn btn-success btn-block btn-lg">로그인</button>
 					</div>
 					<div id="sign_up" class="login-buttons m-t-10">
 						<a href="#modal-dialog" data-toggle="modal"><button type="button" class="btn btn-warning btn-block btn-lg">회원가입</button></a>
@@ -92,6 +91,8 @@
 			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-4.jpg" alt="" /></a></li>
 			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-5.jpg" alt="" /></a></li>
 			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-6.jpg" alt="" /></a></li>
+			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-7.jpg" alt="" /></a></li>
+			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-8.jpg" alt="" /></a></li>
 		</ul>
 	</div>
 	<!-- end page container -->
@@ -99,7 +100,7 @@
 	<div class="modal fade" id="modal-dialog">
 		<div class="modal-dialog ">
 			<div class="modal-content ">
-			<form action="/account/signUp" method="post" class="form-horizontal form-bordered" data-parsley-validate="true" name="sign-up-form">
+			<form action="/account/signUp" method="post" class="form-horizontal form-bordered" name="sign-up-form">
 	           	<fieldset>
 				<div class="modal-header bg-black text-center">
 					<button type="button" class="close btn-danger" data-dismiss="modal" aria-hidden="true">×</button>
@@ -107,10 +108,10 @@
 				</div>
 				<div class="modal-body">					
               		<div class="form-group">
-						<label class="control-label col-md-4 col-sm-4" for="user_id">아이디 :</label>
+						<label class="control-label col-md-4 col-sm-4" for="memberId">아이디 :</label>
 						<div class=" col-md-6 col-sm-6">									
 							<div class="input-group">                               
-								<input class="form-control" type="text" id="user_id" name="user_id" placeholder="아이디를 입력하세요." data-parsley-required="false" />
+								<input class="form-control" type="text" id="memberId" name="memberId" placeholder="아이디를 력하세요." />
 								<div class="input-group-btn">
 									<button type="button" class="btn btn-success">중복체크</button>
 								</div>
@@ -118,27 +119,27 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-md-4 col-sm-4" for="user_name">이름 :</label>
+						<label class="control-label col-md-4 col-sm-4" for="memberName">이름 :</label>
 						<div class="col-md-6 col-sm-6">
-							<input class="form-control" type="text" id="user_name" name="user_name" placeholder="이름을 입력하세요." data-parsley-required="true" />
+							<input class="form-control" type="text" id="memberName" name="memberName" placeholder="이름을 입력하세요(별명도 괜찮습니다.)" />
 						</div>
 					</div>	                      
 					<div class="form-group">
-						<label class="control-label col-md-4 col-sm-4" for="user_password">비밀번호 :</label>
+						<label class="control-label col-md-4 col-sm-4" for="memberPassword">비밀번호 :</label>
 						<div class="col-md-6 col-sm-6">
-							<input class="form-control" type="password" id="user_password" name="user_password" placeholder="비밀번호를 입력하세요." data-parsley-required="true" />
+							<input class="form-control" type="password" id="memberPassword" name="memberPassword" placeholder="비밀번호를 입력하세요." />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-md-4 col-sm-4" for="user_re_password">비밀번호 확인 :</label>
+						<label class="control-label col-md-4 col-sm-4" for="memberPassword_Re">비밀번호 확인 :</label>
 						<div class="col-md-6 col-sm-6">
-							<input class="form-control" type="password" id="user_re_password" name="user_re_password" placeholder="비밀번호를 다시 한번 입력하세요." data-parsley-required="true" />
+							<input class="form-control" type="password" id="memberPassword_Re" name="memberPassword_Re" placeholder="비밀번호를 다시 한번 입력하세요." />
 						</div>
 					</div>                         
 				</div>
 				<div class="modal-footer bg-black">		
 					<a href="javascript:" class="btn btn-danger" data-dismiss="modal">취소</a>
-					<button type="submit" class="btn btn-success"><i class="fa fa-sign-in m-r-10"></i>회원가입 완료</button>
+					<button type="button" onclick="signup_validate(this.form)" class="btn btn-success"><i class="fa fa-sign-in m-r-10"></i>회원가입 완료</button>
 				</div>
 				</fieldset>
  			</form>
@@ -167,7 +168,6 @@
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<script src="/resources/js/ui-modal-notification.demo.min.js"></script>
-	<script src="/resources/plugins/parsley/dist/parsley.js"></script>
 	<script src="/resources/js/login-v2.demo.min.js"></script>
 	<script src="/resources/js/apps.min.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->

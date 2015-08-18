@@ -35,7 +35,26 @@ public class AccountController {
     @RequestMapping(value ="/login", method = RequestMethod.POST)
     public String login(@ModelAttribute("member") Member member){
 
-        return "redirect:main";
+        Member result = this.accountService.getMember(member.getMemberId());
+        if(result!=null) {
+            if (result.getMemberId().equals(member.getMemberId())) {
+                if(result.getMemberPassword().equals(member.getMemberPassword()))
+                {
+                    System.out.println("로그인 성공");
+                }
+                else {
+                    System.out.println("비밀번호틀림");
+                }
+            }
+            else
+            {
+                    System.out.println("아이디틀");
+            }
+        }
+        else {
+            System.out.println("아이디없음");
+        }
+        return "account/test";
     }
 
     @RequestMapping(value ="/signUp", method = RequestMethod.POST)
