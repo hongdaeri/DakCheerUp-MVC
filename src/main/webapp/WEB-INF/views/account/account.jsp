@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%
+	int randomBgImgNumber = (int)(Math.random() * 8 + 1) ;
+%>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="ko" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
@@ -37,7 +40,7 @@
 
 	<div class="login-cover">
 		<div class="login-cover-image">
-			<img src="/resources/img/login-bg/bg-1.jpg" data-id="login-cover-image" alt="" />
+			<img src="/resources/img/login-bg/bg-<%=randomBgImgNumber%>.jpg" data-id="login-cover-image" alt="" />
 		</div>
 		<div class="login-cover-bg"></div>
 	</div>
@@ -65,8 +68,8 @@
 						<input name="memberPassword" type="password" class="form-control input-lg" placeholder="Password" />
 					</div>
 					<div class="checkbox m-b-20">
-						<label> <input type="checkbox" /> ID 기억하기
-						</label>
+						<label> <input type="checkbox" id="autoLogin" name="autoLogin" value="true" onclick="auto_login_check();"/> 자동 로그인 </label>
+						<label id="autoLogin-label" style="display:none">반드시 개인 PC에서만 사용하세요!</label>
 					</div>
 					<div class="login-buttons">
 						<button type="submit" onClick="login_validate(this.form);" class="btn btn-success btn-block btn-lg">로그인</button>

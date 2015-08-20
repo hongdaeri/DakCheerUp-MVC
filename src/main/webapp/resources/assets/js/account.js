@@ -76,3 +76,9 @@ function login_validate(form)
         form.submit();
     }
 }
+
+function auto_login_check()
+{
+ $("#autoLogin-label").show();
+
+}
