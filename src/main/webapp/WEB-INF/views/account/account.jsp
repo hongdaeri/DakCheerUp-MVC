@@ -68,7 +68,7 @@
 						<input name="memberPassword" type="password" class="form-control input-lg" placeholder="Password" />
 					</div>
 					<div class="checkbox m-b-20">
-						<label> <input type="checkbox" id="autoLogin" name="autoLogin" value="true" onclick="auto_login_check();"/> 자동 로그인 </label>
+						<label> <input type="checkbox" id="autoLogin" name="autoLogin" value="true"/> 자동 로그인 </label>
 						<label id="autoLogin-label" style="display:none">반드시 개인 PC에서만 사용하세요!</label>
 					</div>
 					<div class="login-buttons">
@@ -85,7 +85,7 @@
 			
 		</div>
 		<!-- end login -->
-
+<!--
 		<ul class="login-bg-list">
 			<li class="active"><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-1.jpg" alt="" /></a></li>
 			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-2.jpg" alt="" /></a></li>
@@ -96,6 +96,7 @@
 			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-7.jpg" alt="" /></a></li>
 			<li><a href="#" data-click="change-bg"><img src="/resources/img/login-bg/bg-8.jpg" alt="" /></a></li>
 		</ul>
+-->
 	</div>
 	<!-- end page container -->
 	<!-- #modal-dialog -->
@@ -178,6 +179,10 @@
 		$(document).ready(function() {
 			App.init();
 			LoginV2.init();
+
+			$("#autoLogin").click(function() {
+				$("#autoLogin-label").toggle();
+			})
 		});
 	</script>
 </body>

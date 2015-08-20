@@ -77,8 +77,4 @@ function login_validate(form)
     }
 }
 
-function auto_login_check()
-{
- $("#autoLogin-label").show();
 
-}
