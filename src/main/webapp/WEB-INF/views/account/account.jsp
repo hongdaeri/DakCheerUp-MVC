@@ -57,20 +57,19 @@
 			</div>
 			<!-- end brand -->
 			<div class="login-content">
-				<form action="/account/login" method="POST"
-					class="margin-bottom-0">
+				<form action="/account/login" method="POST"	class="margin-bottom-0">
 					<div class="form-group m-b-20">
 						<input name="memberId" type="text" class="form-control input-lg" placeholder="ID" />
 					</div>
 					<div class="form-group m-b-20">
-						<input name="memberPassword" type="text" class="form-control input-lg" placeholder="Password" />
+						<input name="memberPassword" type="password" class="form-control input-lg" placeholder="Password" />
 					</div>
 					<div class="checkbox m-b-20">
 						<label> <input type="checkbox" /> ID 기억하기
 						</label>
 					</div>
 					<div class="login-buttons">
-						<button type="button" onClick="login_validate(this.form);" class="btn btn-success btn-block btn-lg">로그인</button>
+						<button type="submit" onClick="login_validate(this.form);" class="btn btn-success btn-block btn-lg">로그인</button>
 					</div>
 					<div id="sign_up" class="login-buttons m-t-10">
 						<a href="#modal-dialog" data-toggle="modal"><button type="button" class="btn btn-warning btn-block btn-lg">회원가입</button></a>

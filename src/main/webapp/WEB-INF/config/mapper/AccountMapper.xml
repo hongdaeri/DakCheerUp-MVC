@@ -22,8 +22,8 @@
 
 
     <insert id="addMember" parameterType="fourdrone.dakcheerup.domain.member.Member"> <!-- useGeneratedKeys="true" keyProperty="id"> -->
-        INSERT INTO MEMBER
-        VALUES (#{memberId}, #{memberPassword}, #{memberName}, #{regDate})
+        INSERT INTO MEMBER (memberId, memberName, memberPassword, regDate)
+        VALUES (#{memberId}, #{memberName}, #{memberPassword}, #{regDate})
     </insert>
 
     <update id="modMember" parameterType="fourdrone.dakcheerup.domain.member.Member">
@@ -36,5 +36,12 @@
     <delete id="delMember" parameterType="String">
         DELETE FROM MEMBER WHERE memberId = #{memberId}
     </delete>
+
+
+
+    <select id="getMemberForLogin" parameterType="fourdrone.dakcheerup.domain.member.Member" resultMap="MemberResult">
+        SELECT  * FROM  MEMBER
+        WHERE memberId = #{memberId} AND memberPassword = #{memberPassword}
+    </select>
 
 </mapper>

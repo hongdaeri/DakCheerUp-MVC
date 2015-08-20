@@ -13,8 +13,9 @@
 <table>
   <tr>
     <td width="50px" align="center">id</td>
-    <td align="center">email</td>
-    <td align="center">phone</td>
+    <td align="center">pw</td>
+    <td align="center">name</td>
+    <td align="center">reg</td>
   </tr>
   <!-- result는 contoller의 addObject로 부터 가져온다. -->
   <c:forEach items="${result}" var="member">
@@ -26,6 +27,11 @@
     </tr>
   </c:forEach>
 </table>
+
+<%
+  System.out.println((String)session.getAttribute("memberLoginInfo"));
+
+%>
 
 <hr>
 

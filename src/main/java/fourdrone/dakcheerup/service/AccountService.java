@@ -8,7 +8,6 @@ import java.util.ArrayList;
  * Created by h0ngz on 2015. 8. 17..
  */
 public interface AccountService {
-
     Member getMember(String memberId);
 
     void addMember(Member member);
@@ -18,4 +17,6 @@ public interface AccountService {
     void delMember(String memberId);
 
     ArrayList<Member> getMemberList();
+
+    Member getMemberForLogin(Member member);
 }

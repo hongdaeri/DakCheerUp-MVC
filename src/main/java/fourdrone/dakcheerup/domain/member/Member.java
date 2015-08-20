@@ -33,6 +33,7 @@ public class Member {
 	}
 	public void setRegDate(Timestamp regDate) {
 		this.regDate = regDate;
-	}	
-	
+	}
+
+
 }

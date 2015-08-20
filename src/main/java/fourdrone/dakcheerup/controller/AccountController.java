@@ -8,7 +8,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -18,12 +20,15 @@ public class AccountController {
 
     @Autowired  private AccountService accountService;
 
+
+    // 로그인 화면 처리
     @RequestMapping(method = RequestMethod.GET)
-    public String getAccount(ModelMap model) {
-        model.addAttribute("message", "Hello world!!!");
-        return "account/account";    }
+    public String getAccount(@RequestParam(value="error", required=false) String error, ModelMap model) {
 
+        return "account/account";
+   }
 
+    //테스트
     @RequestMapping(value="/test", method = RequestMethod.GET)
     public String test(ModelMap model) {
         List<Member> memberList = this.accountService.getMemberList();
@@ -32,35 +37,34 @@ public class AccountController {
         return "account/test";
     }
 
+    //로그인 처리
     @RequestMapping(value ="/login", method = RequestMethod.POST)
-    public String login(@ModelAttribute("member") Member member){
-
-        Member result = this.accountService.getMember(member.getMemberId());
-        if(result!=null) {
-            if (result.getMemberId().equals(member.getMemberId())) {
-                if(result.getMemberPassword().equals(member.getMemberPassword()))
-                {
-                    System.out.println("로그인 성공");
-                }
-                else {
-                    System.out.println("비밀번호틀림");
-                }
-            }
-            else
-            {
-                    System.out.println("아이디틀");
-            }
+    public String login(@ModelAttribute("member") Member member, HttpSession session){
+        Member loginMember = this.accountService.getMemberForLogin(member);
+        if(loginMember != null)
+        {
+            session.setAttribute("memberLoginInfo",loginMember.getMemberId());
+            return "redirect:test";
         }
         else {
-            System.out.println("아이디없음");
+            return "redirect:";
         }
-        return "account/test";
+
+    }
+    // 로그아웃 처리
+    @RequestMapping(value ="/logout", method = RequestMethod.GET)
+    public String logout(HttpSession session) {
+        session.setAttribute("memberLoginInfo", null);
+        return "account/account";
     }
 
+    //회원가입 처리
     @RequestMapping(value ="/signUp", method = RequestMethod.POST)
     public String signUp(@ModelAttribute("member") Member member){
+
         member.setRegDate(new Timestamp(System.currentTimeMillis()));
         this.accountService.addMember(member);
-        return "redirect:main";
+        return "redirect:test";
     }
+
 }

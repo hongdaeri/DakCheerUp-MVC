@@ -19,7 +19,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Member getMember(String memberId) {
-
         AccountMapper accountMapper = sqlSession.getMapper(AccountMapper.class);
         return accountMapper.getMember(memberId);
     }
@@ -50,5 +49,11 @@ public class AccountServiceImpl implements AccountService {
         AccountMapper accountMapper = sqlSession.getMapper(AccountMapper.class);
         ArrayList<Member> result = accountMapper.getMemberList();
         return result;
+    }
+
+    @Override
+    public Member getMemberForLogin(Member member) {
+        AccountMapper accountMapper = sqlSession.getMapper(AccountMapper.class);
+        return accountMapper.getMemberForLogin(member);
     }
 }

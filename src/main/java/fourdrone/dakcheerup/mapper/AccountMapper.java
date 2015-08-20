@@ -17,4 +17,6 @@ public interface AccountMapper {
     void delMember(String memberId);
 
     ArrayList<Member> getMemberList();
+
+    Member getMemberForLogin(Member member);
 }
